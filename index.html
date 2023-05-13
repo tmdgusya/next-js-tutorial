@@ -2,12 +2,23 @@
 <html lang="en">
 <body>
     <div id="app"></div>
-    <script type="text/javascript">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!--Babel script-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
         const app = document.getElementById('app');
-        const header = document.createElement('h1');
-        const headerContent = document.createTextNode('Develop. Preview. Shop.🚀')
+        // Component Code
+        function Header() {
+            return (<h1>Develop. Preview. Ship.</h1>)
+        }
 
-        header.appendChild(headerContent)
-        app.appendChild(header)
+        function HomePage() {
+            return <div>
+                <Header/>
+            </div>;
+        }
+
+        ReactDOM.render(<HomePage />, app)
     </script>
 </body>
