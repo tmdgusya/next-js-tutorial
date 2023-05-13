@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -46,6 +47,10 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+
+          <h1 className="title">
+            Read <Link href="/posts/first-post">this page!</Link>
+          </h1>
         </div>
       </main>
 
