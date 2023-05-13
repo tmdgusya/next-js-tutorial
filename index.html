@@ -15,9 +15,18 @@
         }
 
         function HomePage() {
+            const [likes, setLikes] = React.useState(0); // initial value is zero
+
+            function handleClick() {
+                console.log("increment like count")
+                setLikes(likes + 1)
+            }
+
             return <div>
                 <Header title="React"/>
                 <Header title="Spring"/>
+
+                <button onClick={handleClick}>Like: {likes}</button>
             </div>;
         }
 
